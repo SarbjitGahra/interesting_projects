@@ -4,6 +4,7 @@ public class MatrixOperations {
 	public static void main (String args[]){
 		int m1 [] [] = { {1, 2}, {3, 4}};
 		int m2 [] [] =new int [][] {{5,6},{7,8}};
+		int m3[][] =  {{0,0},{0,0}};
 		display(m1);
 		display(m2);
 		//add(m1,m2);
@@ -15,6 +16,8 @@ public class MatrixOperations {
 		display(scalarMultiply(m1, 5));
 		System.out.println("Multiplication of two matrices");
 		display(multiply(m1 ,m2));
+		System.out.println(isZeroMatrix(m3));
+		
 	}//ending main
 	
 
@@ -95,6 +98,14 @@ public class MatrixOperations {
 		}
 		
 		return 0;
+	}
+	public static boolean isZeroMatrix(int a[][]){
+		for (int i=0;i<a.length;i++){
+			for(int j=0;j<a.length;j++){
+				if(a[i][j] != 0)return false;				
+			}
+		}
+		return true;
 	}
 
 }
